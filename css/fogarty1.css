@@ -1,22 +1,26 @@
 
+
+
    html {
    	height: 100%;
    }
 
+
    body {
-    max-width: 1000px;
-    padding-left: 10%;  
+    max-width: 1200px;
+    padding-left: 200px;  
    	background: #fff;
    	font-family: 'Lato', sans-serif;
     font-weight: 400; 
    	color: #4B4C4D;
    	text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+
    }
 
    header {
-   	margin-top: 10%;
-    margin-bottom: 80px;
+   	margin-top: 50px;
+    margin-bottom: 50px;
     position: relative;
     padding-top: 50px; 
     z-index: 2;
@@ -25,9 +29,10 @@
 
    #left {
     position: relative;
+    max-width: 50%;
     z-index: 2;
     float: left;
-   }
+  }
 
    #currently {
    	margin-bottom: 60px;
@@ -35,10 +40,12 @@
    }
 
    #face {
-   	position: relative;
-    max-width: 50%;  
+   	position: fixed;
+    width: 100%; 
+    left: 50%; 
     float: right;
     z-index: 1; 
+    overflow: hidden;
 
    }
 
@@ -49,6 +56,40 @@
     padding-left: 40px; 
    }
   
+  @media screen and (max-width: 920px) {
+    #body {
+      padding-left: 10px; 
+    }
+  }
+
+  /*
+
+  @media screen and (max-height: 500px) {
+    #face {
+      bottom: auto;
+    }
+   }
+
+
+   @media screen and (max-width: 1340px) {
+    #face {
+      bottom: auto;
+      overflow: hidden;
+    }
+   }
+
+   @media screen and (max-width: 800px) {
+    #face {
+      width: auto;
+    }
+   }
+
+
+   @media screen and (max-height: 340px) {
+    #links {
+      bottom: auto;
+    }
+   }*/
 
    h1 {
   	font-size: 48px;
@@ -130,47 +171,64 @@
    	color: #59BAE5;
    }
 
+
     img {
-      position:fixed;
-      bottom:0px;
-      left:50%;
       padding-right: 20%; 
       max-width: 900px;
       z-index: 1; 
+      position: fixed;
+
     }
 
-  
-  @media screen and (max-width: 920px) {
-    #body {
-      padding-left: 10px; 
-    }
-  }
 
-  @media screen and (max-width: 885px) {
+
+/* ===================================
+   media queries and stuff...
+   =================================== */
+
+  /* @media screen and (max-width: 850px) {
+
+  	body {
+  		margin: 80px auto auto 0;
+  		padding: 0 30px;
+      padding-left: 70px; 
+  		overflow-x: hidden;
+  		-webkit-transition: all 0.2s ease-in-out;
+  		-moz-transition: all 0.2s ease-in-out;
+  		transition: all 0.2s ease-in-out;
+  	}
+
     img {
-      max-height: 400px; 
-          }
-  }
-
-   @media screen and (max-width: 520px) {
-    body {
-      padding-left: 10px; 
+      display: none; 
     }
 
-    img {
-      display: none;
-    }
+  	header {
+  		padding-bottom: 20px; 
+  	}
 
-    #links {
-      padding-left: 10px; 
-    }
-  }
+  	#logo {
+  		opacity: .4;
+  		margin-bottom: 40px;
+  	}
 
-  @media screen and (max-width: 520px) {
-    h1 {
-      font-size: 38px;
-    }
+  	h1 {
+  		font-size: 40px;
+  		line-height: 52px;
+  		}
+
+  	#links {
+  		position: static;
+  		margin-top: 120px;
+      padding-top: 100px; 
+  		}
+
+  	#face {
+  		position: relative;
+      text-align: center;
+  		width: auto;
+      top: auto;
+      bottom: auto;
+  	}
 
 
-
-
+   }*/
